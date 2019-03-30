@@ -13,7 +13,10 @@ describe "user deletes an article" do
       expect(current_path).to eq(articles_path)
 
       expect(page).to have_content(article_2.title)
+      within("#articles") do
       expect(page).to_not have_content(article_1.title)
+      end
+      expect(page).to have_content("Article #{article_1.title} Deleted Successfully")
     end
   end
 end

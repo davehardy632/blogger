@@ -16,6 +16,7 @@ describe 'As a visitor, when I go to /articles' do
 
         expect(page).to have_content("New Title!")
         expect(page).to have_content("New Body!")
+        expect(page).to have_content("Article New Title! Created Successfully")
       end
     end
   end
